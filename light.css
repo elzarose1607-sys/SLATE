@@ -1,0 +1,150 @@
+div.head{
+    width:100%;
+    height:60px;
+    background: linear-gradient(135deg, #d90596, #c70643);
+    display:block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: -1;
+}
+img.dark{
+    width:32px;
+    height:28px;
+    border-radius: 50%;
+    margin-top: 2px;
+
+}
+button.dark{
+   border-radius: 50%;
+   position: absolute;
+   top:9px;
+   left:1300px;
+   background-color: #c70643;
+   border:2px solid black;
+}
+img.logo{
+     position: absolute;
+   top:0px;
+   left:1350px;
+   width:150px;
+   height:80px;
+   padding-top: 0%;
+   margin: 0%;
+
+   
+}
+div.icons{
+    display:block;
+    justify-content: center;
+}
+button.create{
+ width:100px;
+ height:40px;
+ margin-top: 5px;
+ margin-left: 12px;
+ position: absolute;
+ left:50px;
+ z-index: 3;
+ background: linear-gradient(90deg,rgb(13, 13, 95),rgb(5, 125, 164));
+ border-radius: 30px;
+ border:2px solid white;
+ color:white;
+}
+div.body{
+    border:3px solid black;
+    height:400px;
+    width:90%;
+    z-index: 3;
+    position:absolute;
+    top:120px;
+   left:70px;
+    border-radius: 30px;
+}
+/* Dark mode */
+body.dark {
+    background-color: #121212; /* page background */
+    color: #e0e0e0;           /* default text color */
+}
+
+body.dark .head {
+    background: linear-gradient(135deg, #5a005a, #7a004a); /* dark gradient for header */
+}
+
+body.dark .body {
+    background-color: #1e1e1e;  /* container background */
+    border: 3px solid #444;     /* dark border */
+    color: #e0e0e0;             /* text inside container */
+}
+
+body.dark button.create {
+    background: linear-gradient(90deg, #1a1a5f, #005077);
+    color: white;
+    border: 2px solid #ccc;
+}
+
+body.dark button.dark {
+    background-color: #333;
+    border: 2px solid #555;
+}
+
+body.dark img.logo {
+    filter: brightness(0.9); /* optional: adjust logo for dark background */
+}
+.form-box {
+    display: none;   /* 👈 hides the form initially */
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 10;
+    border:2px solid black;
+
+}
+.task {
+    list-style: none;       /* remove bullet point */
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 15px 20px;
+    border-radius: 20px;
+
+    border: 2px solid black;
+    background-color: white;
+}
+div.body {
+    display: flex;
+    flex-direction: column;  /* stack tasks vertically */
+    gap: 15px;               /* spacing between tasks */
+    padding: 20px;
+    overflow-y: auto;        /* scroll if tasks exceed height */
+}
+.task strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.task small {
+    display: block;
+    margin-top: 4px;
+    color: #555;
+}
+.task input[type="checkbox"] {
+    margin-top: 4px;
+    transform: scale(1.2);
+}
+.task.done {
+    opacity: 0.6;
+}
+
+.task.done strong,
+.task.done small {
+    text-decoration: line-through;
+}
+
+
